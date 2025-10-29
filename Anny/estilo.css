@@ -1,0 +1,185 @@
+/* Configurações básicas */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+}
+
+/* Estilo para o VÍDEO de fundo (Papel de Parede) */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* CAMADA DE ESCURECIMENTO (Overlay) - Essencial para leitura */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* 1. Contêiner da Página */
+.page-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    padding: 20px 0;
+    overflow-y: auto;
+}
+
+
+/* 2. Bloco de Conteúdo (O cartão flutuante) */
+.content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 450px;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: transparent;
+
+    /* ESTILO MODERNO: BORDAS ARREDONDADAS E SOMBRA FLUTUANTE */
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+/* --- Estilos Comuns a Todos os Blocos (AGORA SEM BORDAS SÓLIDAS) --- */
+.title-area,
+.photo-area,
+.text-area,
+.music-area,
+.signature-area {
+    border: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    background-color: transparent;
+}
+
+/* Removendo a margem inferior do último elemento */
+.content-block>div:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Estilos Específicos dos Elementos --- */
+
+/* Título */
+.title-area h1 {
+    color: #ff4081;
+    font-size: 1.8em;
+    margin: 0;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+}
+
+.title-area .highlight {
+    color: white;
+}
+
+/* Imagem */
+.photo-area {
+    width: 95%;
+    max-width: 300px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.photo-area img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Texto */
+.text-area {
+    text-align: justify;
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.text-area p {
+    margin: 0;
+}
+
+
+/* Áudio */
+.music-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.music-area .audio-label {
+    font-style: italic;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 0;
+    font-size: 0.85em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.music-area audio {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Assinatura */
+.signature-area {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgb(113, 26, 26);
+    font-family: 'Brush Script MT', cursive;
+    padding: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.signature-area p {
+    margin: 0;
+}
+
+
+/* Responsividade para telas menores (smartphones) */
+@media (max-width: 600px) {
+    .content-block {
+        width: 95%;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .title-area h1 {
+        font-size: 1.6em;
+    }
+
+    .text-area {
+        font-size: 0.9em;
+    }
+}
